@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h1>Rental Scraper</h1>
+
+<div>
+  <ul>
+    {% for property in props_dic %}
+    <li>
+      <a href="{{property.link}}">{{property.address}}</a>
+
+      <p>Price: {{property.price}} AUD</p>
+      <p>Features: {{property.beds}} bedrooms, {{property.baths}} bathrooms, {{property.car}} car spaces </p>
+      <img src="{{property.image}}">
+    </li>
+
+    {% endfor %} -->
+  </ul>
+</div>
+{% endblock %}
