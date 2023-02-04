@@ -1,41 +1,36 @@
 # Django scrapper
 
+This is an very basic online app that scrapes rental properties from www.rent.com.au
+
+In can be seen at (https://property-scraffer.herokuapp.com/)[https://property-scraffer.herokuapp.com/]
+
+It uses Beautiful Soup as a scrapping engine, and it's deployed in Django 4.
 
 
+## Next steps:
+- Let the user specify the postal code and self trigger the scrape instead of doing it automatically
+- Let the user sort the results
+- Let the user write notes on each rental, and remove it or star it
+- Let the user know when the last scrape was
+
+Also:
+- Add a relational database (PosgreSQL?)
+- Manage the images better (maybe scrape them all?)
+- Scrape from another site (legally) and let the user search for both or each
+
+And, **VERY IMPORTANT**
+Style it!
 
 
+### Disclaimer
+**The data scrapped is for personal, non-commercial use.**
 
-## To run this project
-Locally:
-$python manage.py runserver
-
-default port is set on 8000
-to change
-$python manage.py runserver 8080
-
-
-
-
-## Python Shell commands
->>>p = Properties.objects
->>> p.all()
-
->>>p.filter(name_startswith="somth")
->>>p.filter(id=1)
->>> p.filter(id=323) => will return and empty QuerySet []
-
-To delete
->>> del_object = p.get(id=1)
->>> del_object.delete()
+Below is the rent.com.au robots.txt file content:
+User-agent: *
+Sitemap: https://www.rent.com.au/sitemaps/sitemap.xml.gz
+Sitemap: https://www.rent.com.au/blog/sitemap_index.xml
+Sitemap: https://www.rent.com.au/agents/blog/sitemap_index.xml
+Disallow: /share
+Disallow: /acreage_semi_rurals
 
 
-Create a Property List
->>> p1 = Properties(name="First property list")
->>> p1.save()
-
-Create an item
-pt = Properties.objects.get(id=2)
-pt.item_set.create(text="First Property", complete=False)
-# Create a login
-
-python manage.py createsuperuser
