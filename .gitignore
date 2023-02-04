@@ -3,3 +3,5 @@ instructions.md
 __pycache__/
 db.sqlite3
 venv/
+.DS_Store
+.env
