@@ -3,8 +3,11 @@ autopep8==2.0.1
 beautifulsoup4==4.11.1
 certifi==2022.12.7
 charset-normalizer==3.0.1
+dj-database-url==1.2.0
 Django==4.1.6
+django-heroku==0.3.1
 idna==3.4
+psycopg2==2.9.5
 pycodestyle==2.10.0
 python-decouple==3.7
 pytube==12.1.0
@@ -13,3 +16,4 @@ soupsieve==2.3.2.post1
 sqlparse==0.4.3
 tomli==2.0.1
 urllib3==1.26.14
+whitenoise==6.3.0
