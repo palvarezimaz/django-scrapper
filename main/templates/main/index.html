@@ -4,7 +4,7 @@
 <h1>Rental Scraper</h1>
 
 <div>
-  <ul>
+  <ol>
     {% for property in props_dic %}
     <li>
       <a href="{{property.link}}">{{property.address}}</a>
@@ -14,7 +14,7 @@
       <img src="{{property.image}}">
     </li>
 
-    {% endfor %} -->
-  </ul>
+    {% endfor %}
+    </ul>
 </div>
 {% endblock %}

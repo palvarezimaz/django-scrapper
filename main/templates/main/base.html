@@ -5,14 +5,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %} Property Scrapper {% endblock %}</title>
+  <style type="text/css">
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0 auto;
+      background-color: bisque;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .navbar {
+      top: 0;
+      height: 30px;
+      width: 100%;
+      position: fixed;
+      background-color: rgb(108, 169, 108);
+      z-index: 1;
+      padding-bottom: 40px;
+    }
+
+    .navbar a,
+    span {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #2e1515;
+      display: inline-block
+    }
+
+    .navbar a:hover {
+      color: #f50808
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      padding: 0px 10px;
+      text-decoration: none;
+    }
+  </style>
+
 </head>
 
 <body>
-  <nav>
+  <nav class="navbar">
+    <span class="nav-bar-title">The Rental Scrapper</span>
     <a href="/">Home</a>
     <a href="/about">About</a>
   </nav>
-  <div id="content" , name="content">
+  <div class="content" id="content" , name="content">
     {% block content %}
 
     {% endblock %}
