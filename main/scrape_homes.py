@@ -9,6 +9,16 @@ res2 = requests.get(
     'https://www.rent.com.au/properties/rosanna+3084?rent_low=any&rent_high=any&surrounding_suburbs=2')
 res3 = requests.get(
     'https://www.rent.com.au/properties/rosanna+3084?rent_low=any&rent_high=any&surrounding_suburbs=3')
+# postal_code = '3084'
+
+
+# res = requests.get(
+#     f'https://www.rent.com.au/properties/{postal_code}?rent_low=any&rent_high=any&surrounding_suburbs=1')
+# res2 = requests.get(
+#     f'https://www.rent.com.au/properties/{postal_code}?rent_low=any&rent_high=any&surrounding_suburbs=2')
+# res3 = requests.get(
+#     f'https://www.rent.com.au/properties/{postal_code}?rent_low=any&rent_high=any&surrounding_suburbs=3')
+
 
 soup = BeautifulSoup(res.text, 'html.parser')
 soup2 = BeautifulSoup(res2.text, 'html.parser')
@@ -47,10 +57,10 @@ def create_custom_property_dic(links, images, addresses, prices, features):
         address = addresses[i].getText()
         price = prices[i].getText()
         price = re.sub("[^0-9]", "", price)
-
-        beds = features[0].getText()
-        baths = features[1].getText()
-        car_spots = features[2].getText()
+        if features[0] != 'Pets':
+            beds = features[0].getText()
+            baths = features[1].getText()
+            car_spots = features[2].getText()
 
         property_dic.append({'image': image, 'link': href,
                              'address': address, 'price': price, 'beds': beds, 'baths': baths, 'cars': car_spots})
