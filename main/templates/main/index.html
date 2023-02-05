@@ -4,13 +4,18 @@
 <h1>Rental Scraper</h1>
 
 <div>
+  {{props_dic}}
   <ol>
     {% for property in props_dic %}
     <li>
       <a href="{{property.link}}">{{property.address}}</a>
 
       <p>Price: {{property.price}} AUD</p>
-      <p>Features: {{property.beds}} bedrooms, {{property.baths}} bathrooms, {{property.car}} car spaces </p>
+      <ul>
+        <li>{{property.beds}}</li>
+        <li>{{property.baths}} </li>
+        <li>{{property.cars}} for cars</li>
+      </ul>
       <img src="{{property.image}}">
     </li>
 

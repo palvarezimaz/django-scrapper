@@ -19,18 +19,18 @@ Also:
 - Scrape from another site (legally) and let the user search for both or each
 
 And, **VERY IMPORTANT**
-Style it!
+Improve it's styling (maybe use a color palette)
 
 
 ### Disclaimer
 **The data scrapped is for personal, non-commercial use.**
 
 Below is the rent.com.au robots.txt file content:
-User-agent: *
-Sitemap: https://www.rent.com.au/sitemaps/sitemap.xml.gz
-Sitemap: https://www.rent.com.au/blog/sitemap_index.xml
-Sitemap: https://www.rent.com.au/agents/blog/sitemap_index.xml
-Disallow: /share
-Disallow: /acreage_semi_rurals
+- User-agent: *
+- Sitemap: https://www.rent.com.au/sitemaps/sitemap.xml.gz
+- Sitemap: https://www.rent.com.au/blog/sitemap_index.xml
+- Sitemap: https://www.rent.com.au/agents/blog/sitemap_index.xml
+- Disallow: /share
+- Disallow: /acreage_semi_rurals
 
 
