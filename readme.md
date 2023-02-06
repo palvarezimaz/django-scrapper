@@ -2,7 +2,7 @@
 
 This is an very basic online app that scrapes rental properties from www.rent.com.au
 
-In can be seen at (https://property-scraffer.herokuapp.com/)[https://property-scraffer.herokuapp.com/]
+In can be seen at [https://property-scraffer.herokuapp.com/](https://property-scraffer.herokuapp.com/)
 
 It uses Beautiful Soup as a scrapping engine, and it's deployed in Django 4.
 
