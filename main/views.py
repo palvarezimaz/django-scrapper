@@ -1,17 +1,22 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+# from django import request
+from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
 from . import scrape_homes
+from .forms import SearchPostals
 
 
-def index(response):
-    props_dic = scrape_homes.create_custom_property_dic(
-        scrape_homes.expanded_links,
-        scrape_homes.expanded_images,
-        scrape_homes.expanded_addresses,
-        scrape_homes.expanded_prices,
-        scrape_homes.expanded_features)
+def index(request):
+    form = SearchPostals()
 
-    return render(response, "main/index.html", {"props_dic": props_dic})
+    postal_code = None
+
+    if request.GET.get('postal_code'):
+        pc = request.GET.get('postal_code')
+        props_dic = scrape_homes.create_custom_property_dic(pc)
+
+        return render(request, "main/index.html", {"form": form, "props_dic": props_dic})
+    else:
+        return render(request, "main/index.html", {"form": form})
 
 
 def about(response):

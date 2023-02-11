@@ -8,7 +8,6 @@ It uses Beautiful Soup as a scrapping engine, and it's deployed in Django 4.
 
 
 ## Next steps:
-- Let the user specify the postal code and self trigger the scrape instead of doing it automatically
 - Let the user sort the results
 - Let the user write notes on each rental, and remove it or star it
 - Let the user know when the last scrape was
