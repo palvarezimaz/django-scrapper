@@ -6,6 +6,7 @@ In can be seen at [https://property-scraffer.herokuapp.com/](https://property-sc
 
 It uses Beautiful Soup as a scrapping engine, and it's deployed in Django 4.
 
+**2024 Update:** Webpages elove, and so did rent.com. I haven't updated the label, so the Scrapper doesn't work anymore. Thus. the DB has been discontinued to save costs.
 
 ## Next steps:
 - Let the user sort the results
